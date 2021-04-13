@@ -37,3 +37,4 @@ export class MemberDetailComponent implements OnInit {
       .subscribe(() => this.goBack());
   }
 }
+
