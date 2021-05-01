@@ -32,7 +32,7 @@ export class MemberService {
     const url = `${this.membersUrl}/${id}`;
     return this.http.get<Member>(url)
       .pipe(
-        tap(_ => this.log('社員データを取得しました')),
+        tap(_ => this.log(`社員データ(id=${id})を取得しました`)),
         catchError(this.handleError<Member>(`getMember id=${id}`))
       );
   }

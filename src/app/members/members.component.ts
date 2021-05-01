@@ -12,20 +12,11 @@ export class MembersComponent implements OnInit {
   members: Member[];
 
   constructor(
-    private memberService: MemberService,
-    // private MessageService: MessageService
-    ) { }
+    private memberService: MemberService) { }
 
   ngOnInit(): void {
     this.getMembers();
   }
-
-  // 後で出てくる?
-  // onSelect(member: Member): void{
-  //   this.selectedMember = member;
-  // this.MessageService.add(`MembersComponent: 社員データ(id=${member.id})が選択されました`)；
-  // }
-
 
   getMembers(): void {
     this.memberService.getMembers() //observable

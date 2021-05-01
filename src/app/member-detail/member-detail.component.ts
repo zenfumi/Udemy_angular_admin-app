@@ -29,7 +29,7 @@ export class MemberDetailComponent implements OnInit {
   }
 
   goBack():void{
-    this.location.back
+    this.location.back();
   }
 
   save(): void{
